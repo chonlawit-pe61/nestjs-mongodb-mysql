@@ -26,15 +26,15 @@ export class UsersService {
     return this.userModel.find().exec();
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return this.userModel.findById(id).exec();
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
+  update(id: string, updateUserDto: UpdateUserDto) {
     return this.userModel.findByIdAndUpdate(id, updateUserDto).exec();
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return this.userModel.findByIdAndRemove(id).exec();
   }
 
